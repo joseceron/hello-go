@@ -3,33 +3,26 @@ package main
 import "fmt"
 
 func main() {
-	//Declaracion de constantes
-	const pi float64 = 3.14
-	const pi2 = 3.16
+	helloMessage := "Hello"
+	worldMessage := "world"
 
-	fmt.Println("Pi:", pi)
-	fmt.Println("Pi2:", pi2)
+	// Println: Salto de Linea Automatico
+	fmt.Println(helloMessage, worldMessage)
+	fmt.Println(helloMessage, worldMessage)
 
-	//Declaracion de variables
-	base := 12          //Primera forma
-	var altura int = 14 //Segunda forma
-	var area int        //Go no compila si las variables no son usadas
+	// Printf
+	nombre := "Platzi"
+	cursos := 500
+	// Con valores seguros
+	fmt.Printf("%s tiene más de %d cursos\n", nombre, cursos)
+	// Con valores inseguros
+	fmt.Printf("%v tiene más de %v cursos\n", nombre, cursos)
 
-	fmt.Println(base, altura, area)
+	// Sprintf guarda lo que va a imprimir como un string
+	message := fmt.Sprintf("%v tiene más de %v cursos\n", nombre, cursos)
+	fmt.Println(message)
 
-	//Zero values
-	//Go asigna vaalores a variables vacías
-	var a int
-	var b float64
-	var c string
-	var d bool
-
-	fmt.Println(a, b, c, d)
-
-	//Ejercicio
-	//Calcular el áera del cuadrado
-	const baseCuadrado = 10
-	areaCuadrado := baseCuadrado * baseCuadrado
-
-	fmt.Println("El área del cuadrado es:", areaCuadrado)
+	// Tipo de datos:
+	fmt.Printf("helloMessage: %T\n", helloMessage)
+	fmt.Printf("cursos: %T\n", cursos)
 }
